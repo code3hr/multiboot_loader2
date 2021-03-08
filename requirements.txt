@@ -3,3 +3,6 @@ bootloader: multiboot2
 build: Docker
 emulator: QEMU
 Assembler: NASM installed using docker
+
+run make build-x86_64
+qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso

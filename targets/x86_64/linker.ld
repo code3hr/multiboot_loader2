@@ -1,17 +1,20 @@
+/*specifying entry point */
 ENTRY(start)
-
 
 SECTIONS
 {
-    . = 1M;
+	 /*set the current address to 1mb, system data will start 1mb in */
+	. = 1M;
 
-    .boot :
-    {
-        KEEP(*(.multiboot_header))
-    }
+	.boot :
+	{
+		/*include our multiboot_header from header.asm */
+		KEEP(*(.multiboot_header))
+	}
 
-    .text :
-    {
-        *(.text)
-    }
+	.text :
+	{
+		/*include our text section from main.asm */
+		*(.text)
+	}
 }
