@@ -1,0 +1,5 @@
+Arch: x86
+bootloader: multiboot2
+build: Docker
+emulator: QEMU
+Assembler: NASM installed using docker
