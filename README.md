@@ -1,10 +1,5 @@
-# Write Your Own 64-bit Operating System Kernel From Scratch
+# 64-bit Operating System Kernel
 
-This respository holds all the source code for [this YouTube tutorial series](https://www.youtube.com/playlist?list=PLZQftyCk7_SeZRitx5MjBKzTtvk0pHMtp).
-
-You can find the revision for a specific episode on [this page](https://github.com/davidcallanan/yt-os-series/tags).
-
-Considering supporting this work via [my Patreon page](http://patreon.com/codepulse).
 
 ## Prerequisites
 
@@ -35,7 +30,7 @@ To leave the build environment, enter `exit`.
 
 You can emulate your operating system using [Qemu](https://www.qemu.org/): (Don't forget to add qemu to your path!)
 
- - `qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso`
+ - `qemu-system-x86_64 -cdrom -L "location of qemu here" dist/x86_64/kernel.iso`
  - NOTE: When building your operating system, if changes to your code fail to compile, ensure your QEMU emulator has been closed, as this will block writing to `kernel.iso`.
 
 Alternatively, you should be able to load the operating system on a USB drive and boot into it when you turn on your computer. (I haven't actually tested this yet.)
